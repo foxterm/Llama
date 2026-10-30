@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文文档](README_CN.md)
 
-FoxTerm app dedicated llama.cpp static library — a prebuilt [llama.cpp](https://github.com/ggml-org/llama.cpp) XCFramework with Metal GPU acceleration, for local LLM inference.
+FoxTerm app dedicated llama.cpp framework — a prebuilt [llama.cpp](https://github.com/ggml-org/llama.cpp) dynamic XCFramework with Metal GPU acceleration, for local LLM inference.
 
 > This library is a dedicated core component for the [FoxTerm](https://foxterm.app/) app. Download it here: [https://foxterm.app/](https://foxterm.app/)
 
@@ -10,27 +10,29 @@ FoxTerm app dedicated llama.cpp static library — a prebuilt [llama.cpp](https:
 
 | Platform | Minimum Version |
 |----------|----------------|
-| iOS      | 17.0           |
-| macOS    | 14.0           |
+| iOS      | 16.4           |
+| macOS    | 13.3           |
 
 ## Features
 
 - Based on [llama.cpp v0.8.0](https://github.com/ggml-org/llama.cpp/releases/tag/v0.8.0)
+- **Dynamic framework** — built by the official llama.cpp [build-xcframework.sh](https://github.com/ggml-org/llama.cpp/blob/master/build-xcframework.sh)
 - Backends: Metal (Apple GPU) + Accelerate BLAS + CPU
-- The `.metallib` is embedded inside the static library — no external resources needed
+- The `.metallib` is embedded inside the framework — no external resources needed
 - Supports multimodal models (mtmd / CLIP vision encoder)
-- Slices: macOS arm64/x86_64 (universal), iOS arm64, iOS Simulator arm64
+- Slices: macOS arm64/x86_64 (universal), iOS arm64, iOS Simulator arm64/x86_64
+- Module name: `llama` (lowercase, `import llama`)
 
 ## Build
 
-The `llama.xcframework` is automatically built by [xcframework_build](https://github.com/foxterm/xcframework_build) CI/CD pipeline and pushed to this repository. Manual building is not required for normal usage.
+The `llama.xcframework` is automatically built by [xcframework_build](https://github.com/foxterm/xcframework_build) CI/CD pipeline (which runs the official `./build-xcframework.sh ios-sim ios-device macos`) and pushed to this repository. Manual building is not required for normal usage.
 
 ## Integration
 
-This library is consumed as a prebuilt XCFramework via Swift Package Manager. Add this repository as a package dependency and `import Llama`:
+This library is consumed as a prebuilt XCFramework via Swift Package Manager. Add this repository as a package dependency and `import llama`:
 
 ```swift
-import Llama
+import llama
 
 // C API is available directly after import
 llama_backend_init()
@@ -44,7 +46,7 @@ let params = llama_model_default_params()
 
 ```
 Llama/
-├── llama.xcframework/            # Prebuilt xcframework (auto-built by CI)
+├── llama.xcframework/            # Prebuilt dynamic xcframework (auto-built by CI)
 └── Package.swift
 ```
 
