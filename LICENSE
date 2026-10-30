@@ -22,6 +22,9 @@ SOFTWARE.
 
 ---
 
-This project bundles a precompiled OpenSSL binary (OpenSSL.xcframework).
-OpenSSL is licensed under the Apache License 2.0.
-See https://www.openssl.org/source/license.html
+This project bundles a precompiled llama.cpp binary (llama.xcframework).
+llama.cpp is licensed under the MIT License.
+
+Copyright (c) 2023-2026 The ggml authors
+
+See https://github.com/ggml-org/llama.cpp/blob/master/LICENSE
