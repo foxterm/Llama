@@ -22,7 +22,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dl6OHxbRHrv1AeOLxnBdee7oGbXwsXR2Uz8hAO2WdOI=
+			NEZNpLRjFMcQzWNGJleMbypoEUMdQe3a9eiqdwgv6io=
 			</data>
 		</dict>
 		<key>Headers/ggml-blas.h</key>
@@ -57,7 +57,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K03ZL6mSy070hJF6bGL+9Ql2mHRBYMzAkhT9DEWcksc=
+			Gu96X0ZbHBneMF3W+aDDA/iOSFEzqUuaDuHM5jRckQE=
 			</data>
 		</dict>
 		<key>Headers/gguf.h</key>
@@ -71,21 +71,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wIVHcdN2CkFkLE5ZQpxbO5/HdIh8WdN+6txFJ2gXMs0=
+			8H/7q9P76e8h2XtNTOgyjZwqEjzL9SZvBKMUbXDOT5E=
 			</data>
 		</dict>
 		<key>Headers/mtmd-helper.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s/Ebqw2WmvsFrS0tl6CCxZLBCYk26n0siuonhMJWVN0=
+			c3WPaOc1ZnXNQ03BKY88qOtwZNR+pOqnRCO3ZQVzXRs=
 			</data>
 		</dict>
 		<key>Headers/mtmd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iI3HlJ11BExisVtTugjt7YHoH54OEQ2nizPHbdvVi+U=
+			5T/pSmsMSvNkm4IaR6z9tDTK96FmdXYYhOmfVRjH0qE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
